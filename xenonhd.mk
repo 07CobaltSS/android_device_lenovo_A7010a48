@@ -14,21 +14,22 @@
 # limitations under the License.
 #
 
-# Inherit some common CM stuff.
+# Inherit some common XenonHD stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_A7010a48.mk)
 
 # Device display
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT      := 1920
+TARGET_SCREEN_WIDTH       := 1080
+TARGET_BOOTANIMATION_NAME := 1080
 
 # Device identifier
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := A7010a48
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := A7010a48
-PRODUCT_NAME := lineage_A7010a48
+PRODUCT_NAME := xenonhd_A7010a48
 PRODUCT_RELEASE_NAME := A7010a48
 PRODUCT_RESTRICT_VENDOR_FILES := false

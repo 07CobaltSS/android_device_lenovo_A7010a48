@@ -13,7 +13,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
@@ -33,4 +33,26 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
    libmtk_symbols \
-   libstlport
+   libccci_util
+
+# Mtk symbols & shim
+PRODUCT_PACKAGES += \
+    libshim_asc \
+    libshim_audio \
+    libshim_audioCompat \
+    libshim_cam \
+    libshim_fence \
+    libshim_gui \
+    libshim_parcel \
+    libshim_ui
+
+# Mediatek
+PRODUCT_PACKAGES += \
+    libstlport \
+    libgralloc_extra \
+    libgui_ext \
+    libui_ext
+
+# MTK Logging functions
+PRODUCT_PACKAGES += \
+    liblog_mtk

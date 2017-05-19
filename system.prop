@@ -1,5 +1,5 @@
 #
-# system.prop for Lenovo K4 Note
+# system.prop for Tesla sp9
 #
 
 # RIL
@@ -29,9 +29,6 @@ ro.audio.silent=0
 persist.af.audio_patch_fm=1
 
 ro.zygote.preload.enable=0
-
-# Disable Navigation Bar
-qemu.hw.mainkeys=1
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false

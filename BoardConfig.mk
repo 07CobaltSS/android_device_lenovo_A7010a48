@@ -25,6 +25,9 @@ include $(LOCAL_PATH)/board/*.mk
 
 #######################################################################
 
+# Prebuilt kernel
+TARGET_PREBUILT_KERNEL := device/tesla/sp9/prebuilt/kernel
+
 # Kernel
 TARGET_KMODULES := true
 BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK

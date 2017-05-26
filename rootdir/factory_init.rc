@@ -116,7 +116,7 @@ loglevel 5
 on fs
     write /proc/bootprof "INIT:Mount_START"
     mount_all /fstab.mt6735
-		
+
     #change partition permissions
     exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/boot
     exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/boot
@@ -146,7 +146,7 @@ on post-fs
     mkdir /system/cache 0770 system cache
     # We restorecon /cache in case the cache partition has been reset.
     restorecon_recursive /cache
-    
+
     # We chown/chmod /data again so because mount is run as root + defaults
     chown system system /system/data
     chmod 0777 /system/data
@@ -155,7 +155,7 @@ on post-fs
     chmod 0771 /data
     # We restorecon /data in case the userdata partition has been reset.
     restorecon /data
-    
+
     # Same reason as /data above
     chown system cache /cache
     chmod 0770 /cache
@@ -244,10 +244,10 @@ on post-fs-data
     chown radio radio /dev/ttyMT4
     chmod 0660 /dev/vmodem
     chown radio radio /dev/vmodem
-    
+
     #VIA pppd service
     mkdir /data/pppd_via 0770 radio system
-    
+
     # md32 boot
     chown root system /dev/md32
     chmod 0440 /dev/md32
@@ -523,7 +523,7 @@ service factory_no_image /system/bin/logwrapper /system/bin/factory
     oneshot
 
 service factory_with_image /system/bin/logwrapper /sbin/factory
-	disabled
+    disabled
     oneshot
 
 service mobile_log_d /system/bin/mobile_log_d
@@ -579,7 +579,7 @@ on property:ro.boot.usbconfig=1
     write /sys/class/android_usb/android0/bDeviceClass 02
     write /sys/class/android_usb/android0/enable 1
 
-#singloe modem comport for factory mode   
+#single modem comport for factory mode   
 on property:sys.usb.config=gs3,dual_acm
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor $sys.usb.vid
